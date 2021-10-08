@@ -16,8 +16,9 @@ def plotAllData(xListTitration, yListTitration, mLin, bLin, xNullLin, xHighSlope
     ax.plot(xListTitration, yListTitration, color = "blue", marker = "x", label = "titration readings")
     linFuncValues = createLinValues(mLin, bLin, xNullLin, xHighSlopeLin)
     ax.plot(linFuncValues[0],linFuncValues[1], color = "green", linestyle ="dashed", label = "highest slope")
-    ax.plot(xE, yE, color = "red", marker ="o", label="equivalence point" )
-    plt.legend()
+    ax.plot(xE, yE, color = "red", marker ="o", label="equivalence point")
+    ax.legend()
+    ax.grid()
     return figure
 
 def createLinValues(m, b, xNull, xHighSlope):

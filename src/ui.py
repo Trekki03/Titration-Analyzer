@@ -71,7 +71,6 @@ class Window:
         figure = pl.plotAllData(self.csvData[0],self.csvData[1], linearFunction[0], linearFunction[2], linearFunction[4], linearFunction[1], equivalencePoint[0], equivalencePoint[1])
         chart = FigureCanvasTkAgg(figure, self.root)
         chart.get_tk_widget().grid(row = 5, column = 0, columnspan=2)
-        
         self.cSample.set(az.calculateConcentration(self.cTiter, equivalencePoint[0], self.vSample))
         return None
         
