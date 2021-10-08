@@ -21,6 +21,7 @@ class Window:
         self.root = root
         self.root.title("Titration-Analyzer")
         self.root.geometry="800x600"
+        self.root.resizable(False, False)
         self.vSample = 0.0
         self.cTiter = 0.0
         self.cSample = tk.StringVar()
