@@ -69,7 +69,7 @@ class Window:
     def calculate(self):
         linearFunction = ln.getLinearFunctionBetweenPointsOfHighestSlope(self.csvData[0],self.csvData[1])
         equivalencePoint = az.calculateEquivalencePoint((self.csvData[0])[linearFunction[3]], (self.csvData[0])[linearFunction[3]+1], linearFunction[0], linearFunction[2])                                                                                                
-        figure = pl.plotAllData(self.csvData[0],self.csvData[1], linearFunction[0], linearFunction[2], linearFunction[4], linearFunction[1], equivalencePoint[0], equivalencePoint[1])
+        figure = pl.plotAllData(self.csvData[0],self.csvData[1], linearFunction[0], linearFunction[2], linearFunction[4], linearFunction[1], equivalencePoint[0], equivalencePoint[1], linearFunction[5])
         chart = FigureCanvasTkAgg(figure, self.root)
         chart.get_tk_widget().grid(row = 5, column = 0, columnspan=2)
         self.cSample.set(az.calculateConcentration(self.cTiter, equivalencePoint[0], self.vSample))

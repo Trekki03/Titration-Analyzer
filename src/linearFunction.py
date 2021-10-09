@@ -27,4 +27,6 @@ def getLinearFunctionBetweenPointsOfHighestSlope(xList, yList):
     x = xList[xIndex] 
     b = yList[xIndex] - (m*x)
     nullPointX = (-b/m)
-    return (m,x,b,xIndex,nullPointX)
+    highestValue = yList.max()
+    highestPointX = (highestValue-b)/m 
+    return (m,x,b,xIndex,nullPointX, highestPointX)
