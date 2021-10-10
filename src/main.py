@@ -1,18 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct  8 20:23:37 2021
-
-@author: trekk
+First created on 10/10/2021
+@author: github.com/Trekki03
 """
 
-
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import tkinter as tk
-import ui
-
-
+import gui
 
 root = tk.Tk()
-gui = ui.Window(root)
+gui.Window(root)
 root.mainloop()
